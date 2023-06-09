@@ -42,10 +42,13 @@ for (const animal in animals){
 
 const background = <img className='background' alt='ocean' src='/images/ocean.jpg'/>; 
 
+const showBackground = true; //or false 
+
 const animalFacts = (
   <div>
     <h1>{title == '' && 'Click an animal for a fun fact' }</h1>
-    {background}
+    {showBackground && background}
+    {!showBackground && background == ''} 
     <p id='fact'></p>
     <div className='animals'>{images}</div>
   </div>
